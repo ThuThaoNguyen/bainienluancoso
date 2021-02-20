@@ -1,0 +1,18 @@
+<div class="col-md-12">
+        <div>
+            <h3>Các cấu trúc thông dụng</h3>
+        </div>
+             <h5> 11.1. Cấu trúc IF </h5>
+             <p>&nbsp;&nbsp;&nbsp;&nbsp;IF Boolean expression &#123; sql statement | statement block 	&#125; </p>
+
+             <p>&nbsp;&nbsp;&nbsp;&nbsp;[ELSE &#123;  sql statement | a tatement _ block &#123; ]</p>
+             <p>Ví dụ: trong cơ sở dữ liệu qnv , viết đoạn truy vấn : nếu bảng NHANVIEN có nhiều hơn 100 mẫu tin thì hiển thị nội dung của nó , ngược lại hiển thị nội dung của bảng PHONG </p>
+             <p>&nbsp;&nbsp;&nbsp;&nbsp;use qlnv </p>
+             <p>&nbsp;&nbsp;&nbsp;&nbsp;If ( select count ( many ) from nhanvien ) > 100 </p>
+             <p>&nbsp;&nbsp;&nbsp;&nbsp;begin </p>
+             <p>&nbsp;&nbsp;&nbsp;&nbsp;select * from nhanvien</p>
+             <p>&nbsp;&nbsp;&nbsp;&nbsp;end </p>
+             <p>&nbsp;&nbsp;&nbsp;&nbsp;Else begin </p>
+             <p>&nbsp;&nbsp;&nbsp;&nbsp;select * from phong</p>
+             <p>&nbsp;&nbsp;&nbsp;&nbsp;end</p>
+</div>

@@ -1,0 +1,16 @@
+<div class="col-md-12">
+        <div>
+            <h3>Khai báo và gán giá trị cho biến</h3>
+        </div>
+             <p>&nbsp;&nbsp;DECLARE &#123; @ local variable [ AS ] data type 	&#125; </p>
+             <p>&nbsp;&nbsp;  SET&#123; @ local variable = expression&#125; </p>
+             <p>Ví dụ , trong cơ sở dữ liệu qlny khai báo hai biến để lưu tổng số nam và tổng số nữ . In kết quả lên màn hình  </p>
+             <p>&nbsp;&nbsp;USE qlnv </p>
+             <p>&nbsp;&nbsp;DECLARE @ tongluongnam int  </p>
+             <p>&nbsp;&nbsp;DECLARE @ tongluongnu int  </p>
+             <p>&nbsp;&nbsp;SET @ tongluongnam = (SELECT SUM ( luong )FROM nhanvien WHERE phai = ' Nam ' )</p>
+             <p>&nbsp;&nbsp;SET @ tongluongnum ( SELECT s urn ( luong ) FROM nhan vien WHERE phai " Nu " ) </p>
+             <p>&nbsp;&nbsp;PRINT ' Tong luong nam : ' + 3tr ( @tongluongnam ) </p>
+             <p>&nbsp;&nbsp;PRINT ' Tong luong nu : ' + 8tr ( @ tongluongnu ) </p>
+    </div>
+            

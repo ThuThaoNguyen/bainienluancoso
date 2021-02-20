@@ -1,0 +1,76 @@
+<div id="yy">
+    <nav class="navbar navbar-expand-md custom-header ">
+        <div class="container-fluid" style=" background-color:#4ABDAC"><a class="navbar-brand" href="#" style=" color:white;font-size:35px;margin-top:20px;margin-right:90px;text-shadow: -1px 2px white;font-family: 'Alex Brush', cursive;">Q&amp;A Database</a>
+            <div
+                class="collapse navbar-collapse" id="navbar-collapse" style="font-family: 'Times New Roman', Times, serif;">
+                <ul class="nav navbar-nav links">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href=""  [routerLink]="'/page1'"  routerLinkActive="active" >Tổng quan CSDL</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="" [routerLink]="'/page2'">Đại số quan hệ</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="" [routerLink]="'/page3'">Phụ thuộc hàm &amp; khóa</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href=""style="background-color: #f7b733;color: white;border:2px solid white">Chuẩn hóa LĐQH</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href=""[routerLink]="'/page5'">SQL&nbsp;</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href="" routerLink="/page6">Thông tin HP</a></li>
+                </ul>
+                <div class="nav navbar-nav ml-auto"><li><a href="" routerLink=""><img src="assets/Image/ynguyen.png" width="40" height="40" style= "text-align:right; margin-right: -10px;"></a></li></div>
+        </div>
+        </div>
+    </nav>
+    <div id="wrapper" style="font-family: 'Times New Roman', Times, serif;">
+        <div id="sidebar-wrapper" style="background-color:white;color:black; width: 334px;">
+            <ul class="sidebar-nav">
+                <li> <a  (click)="clickback()" [style.background-color]="page==false?'#f7b733':''" [style.color]="page==false?'white':''" [style.border-right-color]="page==false?'#dfdce3':''" style="font-size: 20px;background-color: #f7b733; color:white; border-right:5px solid #dfdce3;height:95px">Khái niệm về chuẩn hóa CSDL</a></li>
+                <li id="menu"> <a   [style.background-color]="page2==true&&page==true?'#f7b733':''" [style.color]="page2==true&&page==true?'white':''" [style.border-right-color]="page2==true&&page==true?'#dfdce3':''" (click)="clickphan2()" [routerLink]="'phan2'" routerLinkActive="active" style="font-size: 20px;">Phép tách không tổn thất<br> thông tin</a>
+                <li id="menu"> <a  [style.background-color]="page3==true&&page==true?'#f7b733':''" [style.color]="page3==true&&page==true?'white':''" [style.border-right-color]="page3==true&&page==true?'#dfdce3':''" (click)="clickphan3()" [routerLink]="'phan3'" routerLinkActive="active" style="font-size: 20px;">Phép tách bảo toàn<br> phụ thuộc hàm</a>
+                <li id="menu"> <a [style.background-color]="page4==true&&page==true?'#f7b733':''" [style.color]="page4==true&&page==true?'white':''" [style.border-right-color]="page4==true&&page==true?'#dfdce3':''" (click)="clickphan4()" [routerLink]="'phan4'" routerLinkActive="active"  style="font-size: 20px;">Các dạng chuẩn <br>1NF , 2NF , 3NF , BCNF </a>
+
+            </ul>
+        </div>
+   
+        <div class="page-content-wrapper"style="margin:10px 95px;padding:20px; background-color:white; height:650px; overflow:auto;font-size:16px">
+            <div [style.display]="page==false?'none':'block'">
+                 <router-outlet></router-outlet>
+            </div>
+            <div class="container-fluid" [style.display]="page==true?'none':'block'">
+                <div class="row"style="color:black;">
+                    <div class="col-md-12">
+                        <div>
+                            <h3>KHÁI NIỆM VỀ CHUẨN HÓA CƠ SỞ DỮ LIỆU </h3>
+                        </div>
+                        <h3>1.1	Sự chuẩn hóa </h3>
+                        <p>Chúng ta sẽ tìm hiểu một số khái niệm cơ bản của việc chuẩn hóa cơ sở dữ liệu quan hệ . Đã có nhiều kết quả nghiên cứu hữu ích trong lĩnh vực chuẩn hóa cơ sở dữ liệu quan hệ nhưng vẫn còn một số bất lợi trong khi tìm kiếm thông tin . Vì vậy người ta cũng chỉ mới đề xuất các dạng sao cho tiện lợi , đem giản hơn trong quá trình thao tác các ngôn ngữ dữ liệu .</p>
+                        <p>Trong tài liệu Further Normalization of the Database Relatiomal Model lần đầu tiên E.F. Codd đưa ra khái niệm chuẩn hóa quan hệ . Ông đã chia các quan hệ thành 3 lớp và gọi chúng là các dạng chuẩn thứ nhất , dạng chuẩn thử hai và dạng chuẩn thứ ba .</p>
+                        <p> Để mô tả một cách tổng quát các mức độ chuẩn hóa cơ sở dữ liệu quan hệ người ta có hình vẽ sau đây :</p>
+                        <img src="assets/Image/chuong4phan1.png" height="600px" width="800px" style="margin-left: 100px;"/>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div  class="media1"  (click)="clickvideo()"  [routerLink]="'video'" routerLinkActive="active"><img src="assets/Image/video.png"  class="icon-footer" />  </div>  
+<div  class="media2"  (click)="clickgiaotrinh()" [routerLink]="'giaotrinh'" routerLinkActive="active"><img src="assets/Image/book.png"  class="icon-footer" />  </div>  
+<div  class="media3"  (click)="clickbaitap()" [routerLink]="'baitap'" routerLinkActive="active"><img src="assets/Image/tl.png"  class="icon-footer" />  </div> 
+<!-- <div class="footer">
+    <div id="icon"(click)="setClick()"  >
+             <div class="icon1"><img src="/assets/Image/text.png"  class="icon-footer" /> </div>  
+    </div>
+    <div [style.display]="value==true?'inline':'none'" id="container" class="footer-head" >
+            <div style="float:right; margin-right: 50px;" (click)="removeClick()"> <a> <img src="assets/Image/thoattest.png" height="20px" width="20px" /> </a></div> 
+             <div id="cont" >
+                     <div class="footer_center"  style="overflow:auto;" >
+                            
+                               <div *ngFor="let kiemtras of kiemtra  | paginate:{itemsPerPage: 1, currentPage:p}">
+        
+                                <app-kiemtra [kiemtras]="kiemtras" ></app-kiemtra>
+                                <!-- <pagination-controls (pageChange)="p=$event"> </pagination-controls> -->
+                                <!-- <p *ngFor="let cauhois of cauhoi | paginate:{itemsPerPage: 1, currentPage:p}">Câu hỏi: {{cauhois.cauhoi}}</p> -->
+                               <!-- </div>
+                               <pagination-controls (pageChange)="p=$event"> </pagination-controls> --> 
+                               <!-- | paginate: {itemsPerPage: 1, CurrentPage:p} -->
+<!--                              
+                   </div>
+              </div>
+     </div>
+      -->

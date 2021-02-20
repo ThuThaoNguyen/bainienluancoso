@@ -1,0 +1,86 @@
+<div id="yy">
+    <nav class="navbar navbar-expand-md custom-header ">
+        <div class="container-fluid" style=" background-color:#4ABDAC"><a class="navbar-brand" href="#" style=" color:white;font-size:35px;margin-top:20px;margin-right:90px;text-shadow: -1px 2px white; font-family: 'Alex Brush', cursive;">Q&amp;A Database</a>
+            <div
+                class="collapse navbar-collapse" id="navbar-collapse" style="font-family: 'Times New Roman', Times, serif;">
+                <ul class="nav navbar-nav links">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="" [routerLink]="'/page1'" >Tổng quan CSDL</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="" style="background-color: #f7b733;color: white;border:2px solid white">Đại số quan hệ</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="" [routerLink]="'/page3'">Phụ thuộc hàm &amp; khóa</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href="" [routerLink]="'/page4'">Chuẩn hóa LĐQH</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href="" [routerLink]="'/page5'">SQL&nbsp;</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href="" routerLink="/page6">Thông tin HP</a></li>
+                </ul>
+                <div class="nav navbar-nav ml-auto"><li><a href="" routerLink=""><img src="assets/Image/ynguyen.png" width="40" height="40" style= "text-align:right; margin-right: -15px;"></a></li></div>
+        </div>
+        </div>
+    </nav>
+    <div id="wrapper" style="font-family: 'Times New Roman', Times, serif;">
+        <div id="sidebar-wrapper" style="background-color:white;color:black; width: 334px;">
+            <ul class="sidebar-nav">
+                <li> <a  (click)="clickback()" [style.background-color]="page==false?'#f7b733':''" [style.color]="page==false?'white':''" [style.border-right-color]="page==false?'#dfdce3':''" style="font-size: 20px;background-color: #f7b733; color:white; border-right:5px solid #dfdce3;height: 80px;">Cơ sở dữ liệu quan hệ</a></li>
+                <li id="menu"> <a   [style.background-color]="page2==true&&page==true?'#f7b733':''" [style.color]="page2==true&&page==true?'white':''" [style.border-right-color]="page2==true&&page==true?'#dfdce3':''" (click)="clickphan2()" [routerLink]="'phan2'" routerLinkActive="active" style="font-size: 20px;">Sự thông thương giữa các lược đồ quan hệ</a>
+                <li id="menu"> <a  [style.background-color]="page3==true&&page==true?'#f7b733':''" [style.color]="page3==true&&page==true?'white':''" [style.border-right-color]="page3==true&&page==true?'#dfdce3':''" (click)="clickphan3()" [routerLink]="'phan3'" routerLinkActive="active" style="font-size: 20px;">Đại số quan hệ <br>( Relational Algebra ) </a>
+                <li id="menu"> <a [style.background-color]="page4==true&&page==true?'#f7b733':''" [style.color]="page4==true&&page==true?'white':''" [style.border-right-color]="page4==true&&page==true?'#dfdce3':''" (click)="clickphan4()" [routerLink]="'phan4'" routerLinkActive="active"  style="font-size: 20px;height: 80px;">Phép toán quan hệ</a>
+                <li id="menu"> <a [style.background-color]="page5==true&&page==true?'#f7b733':''" [style.color]="page5==true&&page==true?'white':''" [style.border-right-color]="page5==true&&page==true?'#dfdce3':''" (click)="clickphan5()" [routerLink]="'phan5'" routerLinkActive="active"  style="font-size: 20px;">Các hàm kết tập <br>( Aggregate Functions ) </a>
+
+            </ul>
+        </div>
+   
+        <div class="page-content-wrapper"style="margin:10px 95px;padding:20px; background-color:white; height:650px; overflow:auto; font-size:16px;">
+            <div [style.display]="page==false?'none':'block'">
+                 <router-outlet></router-outlet>
+            </div>
+            <div class="container-fluid" [style.display]="page==true?'none':'block'">
+                <div class="row"style="color:black;">
+                    <div class="col-md-12" style="font-family: 'Times New Roman', Times, serif;">
+                        <div>
+                            <h3>CƠ SỞ DỮ LIỆU QUAN HỆ</h3>
+                        </div>
+                        <h5>1.1 Tập hợp thuộc tính ( Attribute ) và miền giá trị ( Domain )</h5>
+                        <p> Một giá trị được gọi là nguyên tố ( atomic ) hoặc là giá trị đơn , khi không được phép phân chia ra nữa trong ngữ cảnh đang xét . Ví dụ , nếu ngaysinh kiểu Date thì giá trị 25 / 10 / 1975 là nguyên tố , nhưng nếu trong ngữ cảnh được hiểu như là một tổ hợp gồm ngày ( Day ) , thảng ( Month ) và năm ( Year ) thi giá trị đó không còn là nguyên tố mà bao gồm các giá trị nguyên tố 25 , 10 , 1975 . </p>
+                        <p>Xét tập hợp Q = 	&#123;	 A1 , A 2, . . . , An	&#125;	 được gọi là các thuộc tính , và các tập hợp D1 , D1 , . . . , Dn , đều chứa các giá trị nguyên tố được gọi là các miền giá trị . Thuộc tính A nhận giá trị trong miền giá trị D , ( i = 1 , 2 , . . . , n ) , ký hiệu dom ( Ai ) = Di.</p>
+                        <p>Ví dụ , khi nói về hồ sơ sinh viên người ta quan tâm đến tập hợp các thuộc tính</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q =	&#123;masv , htsv , nssv &#125; </p>
+                        <p>và giá trị tương ứng của của chúng được cho như sau : </p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dom ( masv ) =  	&#123; 1033010 , 1033014 , 1032967&#125;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dom ( htsv ) =  	&#123; Nguyen Minh Thien , Tran Minh Sang , Le Cong Vu&#125;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dom ( nssv ) =  &#123; 1985 , 1986 , 1987 , 1988 &#125;. </p>
+                        <p>1.2	Quan hệ ( Relation ) </p>
+                        <p>Quan hệ R trên tập hợp các thuộc tính Q = &#123; A1 , A2 , . . . , An&#125; , nhận giá trị trên D1,D2 , , . . . , Dn , là một tập hợp con của tích Descartes D1xD2 , x . . . xDn . Mỗi phần tử t = ( d1 , d2 , , , dn ) của quan hệ được gọi là một bộ (tuple) . Vậy một quan hệ là một tập hợp các bộ có dạng :</p>
+                        <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R = &#123; ( d1, d2, . . .,dn ) / di ∈ Di , i = 1 , 2 , . . . , n &#125; </p>
+                        <p>Ví dụ với tập hợp các thuộc tính và miền giá trị như đã xét , tích Descartes</p>
+                        <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D1 xD2 , xD3, có 3x3x4 = 36 bộ </p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &#123;( 010 , NMT , 1985 ) , ( 010 , NMT , 1986 ) , ( 010 , NMT , 1987 ) , . . . ( 967 , LCV , 1988 ) &#125;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div  class="media1"  (click)="clickvideo()"  [routerLink]="'video'" routerLinkActive="active"><img src="assets/Image/video.png"  class="icon-footer" />  </div>  
+<div  class="media2"  (click)="clickgiaotrinh()" [routerLink]="'giaotrinh'" routerLinkActive="active"><img src="assets/Image/book.png"  class="icon-footer" />  </div>  
+<div  class="media3"  (click)="clickbaitap()" [routerLink]="'baitap'" routerLinkActive="active"><img src="assets/Image/tl.png"  class="icon-footer" />  </div> 
+<!-- <div class="footer">
+    <div id="icon"(click)="setClick()"  >
+             <div class="icon1"><img src="/assets/Image/text.png"  class="icon-footer" /> </div>  
+    </div>
+    <div [style.display]="value==true?'inline':'none'" id="container" class="footer-head" >
+            <div style="float:right; margin-right: 50px;" (click)="removeClick()"> <a> <img src="assets/Image/thoattest.png" height="20px" width="20px" /> </a></div> 
+             <div id="cont" >
+                     <div class="footer_center"  style="overflow:auto;" >
+                            
+                               <div *ngFor="let kiemtras of kiemtra  | paginate:{itemsPerPage: 1, currentPage:p}">
+        
+                                <app-kiemtra [kiemtras]="kiemtras" ></app-kiemtra>
+                                <!-- <pagination-controls (pageChange)="p=$event"> </pagination-controls> -->
+                                <!-- <p *ngFor="let cauhois of cauhoi | paginate:{itemsPerPage: 1, currentPage:p}">Câu hỏi: {{cauhois.cauhoi}}</p> -->
+                               <!-- </div>
+                               <pagination-controls (pageChange)="p=$event"> </pagination-controls> -->
+                               <!-- | paginate: {itemsPerPage: 1, CurrentPage:p} -->
+<!--                              
+                   </div>
+              </div>
+     </div> -->
+      

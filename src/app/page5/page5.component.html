@@ -1,0 +1,94 @@
+<div id="yy">
+    <nav class="navbar navbar-expand-md custom-header ">
+        <div class="container-fluid" style=" background-color:#4ABDAC"><a class="navbar-brand" href="#" style=" color:white;font-size:35px;text-shadow: -1px 2px white;margin-top:20px;margin-right:90px; font-family: 'Alex Brush', cursive;">Q&amp;A Database</a>
+            <div
+                class="collapse navbar-collapse" id="navbar-collapse" style="font-family: 'Times New Roman', Times, serif;">
+                <ul class="nav navbar-nav links">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href=""  [routerLink]="'/page1'"routerLinkActive="active" [routerLink]="'/page1'">Tổng quan CSDL</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="" [routerLink]="'/page2'">Đại số quan hệ</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="" [routerLink]="'/page3'" >Phụ thuộc hàm &amp; khóa</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href=""[routerLink]="'/page4'">Chuẩn hóa LĐQH</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href=""style="background-color: #f7b733;color: white;border:2px solid white">SQL&nbsp;</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href="" routerLink="/page6">Thông tin HP</a></li>
+                </ul>
+                <div class="nav navbar-nav ml-auto"><li><a href="" routerLink=""><img src="assets/Image/ynguyen.png" width="40" height="40" style= "text-align:right; margin-right: -10px;"></a></li></div>
+        </div>
+        </div>
+    </nav>
+    <div id="wrapper" style="font-family: 'Times New Roman', Times, serif;">
+        <div id="sidebar-wrapper" style="background-color:white;color:black; width: 334px;">
+            <ul class="sidebar-nav">
+                <li> <a  (click)="clickback()" [style.background-color]="page==false?'#f7b733':''" [style.color]="page==false?'white':''" [style.border-right-color]="page==false?'#dfdce3':''" style="font-size: 20px;background-color: #f7b733; color:white; border-right:5px solid #dfdce3">Mở đầu  </a></li>
+                <li id="menu"> <a   [style.background-color]="page2==true&&page==true?'#f7b733':''" [style.color]="page2==true&&page==true?'white':''" [style.border-right-color]="page2==true&&page==true?'#dfdce3':''" (click)="clickphan2()" [routerLink]="'phan2'" routerLinkActive="active" style="font-size: 20px;height:115px">Ngôn ngữ truy vấn có cấu trúc<br>SQL </a>
+                <li id="menu"> <a  [style.background-color]="page3==true&&page==true?'#f7b733':''" [style.color]="page3==true&&page==true?'white':''" [style.border-right-color]="page3==true&&page==true?'#dfdce3':''" (click)="clickphan3()" [routerLink]="'phan3'" routerLinkActive="active" style="font-size: 20px;">Tạo và cập nhật CSDL</a>
+                <li id="menu"> <a [style.background-color]="page4==true&&page==true?'#f7b733':''" [style.color]="page4==true&&page==true?'white':''" [style.border-right-color]="page4==true&&page==true?'#dfdce3':''" (click)="clickphan4()" [routerLink]="'phan4'" routerLinkActive="active"  style="font-size: 20px;">Tạo bảng và cập nhật CSDL</a>
+                <li id="menu"> <a  [style.background-color]="page5==true&&page==true?'#f7b733':''" [style.color]="page5==true&&page==true?'white':''" [style.border-right-color]="page5==true&&page==true?'#dfdce3':''" (click)="clickphan5()" [routerLink]="'phan5'" routerLinkActive="active" style="font-size:20px;">Truy vấn dữ liệu</a></li>
+                <li id="menu"> <a  [style.background-color]="page6==true&&page==true?'#f7b733':''" [style.color]="page6==true&&page==true?'white':''" [style.border-right-color]="page6==true&&page==true?'#dfdce3':''" (click)="clickphan6()" [routerLink]="'phan6'" routerLinkActive="active" style="font-size:20px;">Truy vấn trên nhiều bảng</a></li>
+                <li id="menu"> <a  [style.background-color]="page7==true&&page==true?'#f7b733':''" [style.color]="page7==true&&page==true?'white':''" [style.border-right-color]="page7==true&&page==true?'#dfdce3':''" (click)="clickphan7()" [routerLink]="'phan7'" routerLinkActive="active" style="font-size:20px;">Truy vấn lồng</a></li>
+                <li id="menu"> <a  [style.background-color]="page8==true&&page==true?'#f7b733':''" [style.color]="page8==true&&page==true?'white':''" [style.border-right-color]="page8==true&&page==true?'#dfdce3':''" (click)="clickphan8()" [routerLink]="'phan8'" routerLinkActive="active" style="font-size:20px;">Các ví dụ</a></li>
+                <li id="menu"> <a  [style.background-color]="page9==true&&page==true?'#f7b733':''" [style.color]="page9==true&&page==true?'white':''" [style.border-right-color]="page9==true&&page==true?'#dfdce3':''" (click)="clickphan9()" [routerLink]="'phan9'" routerLinkActive="active" style="font-size:20px;">Cài đặt ràng buộc toàn vẹn</a></li>
+                <li id="menu"> <a  [style.background-color]="page10==true&&page==true?'#f7b733':''" [style.color]="page10==true&&page==true?'white':''" [style.border-right-color]="page10==true&&page==true?'#dfdce3':''" (click)="clickphan10()" [routerLink]="'phan10'" routerLinkActive="active" style="font-size:20px;">Khai báo và gán trị cho biến</a></li>
+                <li id="menu"> <a  [style.background-color]="page11==true&&page==true?'#f7b733':''" [style.color]="page11==true&&page==true?'white':''" [style.border-right-color]="page11==true&&page==true?'#dfdce3':''" (click)="clickphan11()" [routerLink]="'phan11'" routerLinkActive="active" style="font-size:20px;">Các cấu trúc thông dụng</a></li>
+                <li id="menu"> <a  [style.background-color]="page12==true&&page==true?'#f7b733':''" [style.color]="page12==true&&page==true?'white':''" [style.border-right-color]="page12==true&&page==true?'#dfdce3':''" (click)="clickphan12()" [routerLink]="'phan12'" routerLinkActive="active" style="font-size:20px;">Thủ tục và hàm vô hướng</a></li>
+                <li id="menu"> <a  [style.background-color]="page13==true&&page==true?'#f7b733':''" [style.color]="page13==true&&page==true?'white':''" [style.border-right-color]="page13==true&&page==true?'#dfdce3':''" (click)="clickphan13()" [routerLink]="'phan13'" routerLinkActive="active" style="font-size:20px;">Kiểm tra ràng buộc bằng Trigger</a></li>
+                <li id="menu"> <a  [style.background-color]="page14==true&&page==true?'#f7b733':''" [style.color]="page14==true&&page==true?'white':''" [style.border-right-color]="page14==true&&page==true?'#dfdce3':''" (click)="clickphan14()" [routerLink]="'phan14'" routerLinkActive="active" style="font-size:20px;">Tạo dự phòng và phục hồi CSDL</a></li>
+            </ul>
+        </div>
+   
+        <div class="page-content-wrapper"style="margin:10px 95px;padding:20px; background-color:white; height:1150px; overflow:auto; font-size:16px">
+            <div [style.display]="page==false?'none':'block'">
+                 <router-outlet></router-outlet>
+            </div>
+            <div class="container-fluid" [style.display]="page==true?'none':'block'">
+                <div class="row"style="color:black;">
+                    <div class="col-md-12">
+                        <div>
+                            <h3>MỞ ĐẦU </h3>
+                        </div>
+                        <p>Đa số các hệ quản trị cơ sở dữ liệu trên thị trường đều có một đặc điểm chung là sử dụng ngôn ngữ truy vẫn có câu trúc SQL ( Struclared Query Language ) . Các hệ quản trị cơ sở dữ liệu phổ biến được nhiều người biết đến là </p>
+                        <h6>MySQL</h6>
+                        <p>Là hệ quản trị cơ sở dữ liệu mã nguồn mở phổ biến nhất thế giới và được các nhà phát triển rất ưa chuộng trong quá trình phát triển ứng dụng </p>
+                        <h6>Oracle</h6>
+                        <p> Là tên của một hãng phần mềm , một hệ quản trị cơ sở dữ liệu phổ biến trên thế giới . Hãng Oracle ra đời đầu những năm 70 của thế kỷ 20 tại nước Mỹ . </p>
+                        <h6>PostgreSQL </h6>
+                        <p>Là một hệ quản trị cơ sở dữ liệu quan hệ và đối tượng dựa trên POSTGRES . Phiên bản 4 . 2 , được Khoa điện toán của đại học California tại Berkeley phát triển . </p>
+                        <h6>DB2 </h6>
+                        <p>Là một trong các dòng phần mềm quản trị cơ sở dữ liệu quan hệ của IBM ( RDBMS : Relational Database Management System ) . </p>
+                        <h6>Informix</h6>
+                        <p> Infornix là hệ quản trị cơ sở dữ liệu được xây dựng và phát triển tại Thăm 1980 , là sản phẩm của công ty Informix Software.</p>
+                        <h6> SQL Server </h6>
+                        <p>Là hệ quản trị của Microsoft chỉ chạy trên hệ điều hành Windows. Tài liệu này sẽ trình bày câu lệnh theo cú pháp cuả SQL Server 2017</p>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div  class="media1"  (click)="clickvideo()"  [routerLink]="'video'" routerLinkActive="active"><img src="assets/Image/video.png"  class="icon-footer" />  </div>  
+<div  class="media2"  (click)="clickgiaotrinh()" [routerLink]="'giaotrinh'" routerLinkActive="active"><img src="assets/Image/book.png"  class="icon-footer" />  </div>  
+<div  class="media3"  (click)="clickbaitap()" [routerLink]="'baitap'" routerLinkActive="active"><img src="assets/Image/tl.png"  class="icon-footer" />  </div> 
+<!-- <div class="footer">
+    <div id="icon"(click)="setClick()"  >
+             <div class="icon1"><img src="/assets/Image/text.png"  class="icon-footer" /> </div>  
+    </div>
+    <div [style.display]="value==true?'inline':'none'" id="container" class="footer-head" >
+            <div style="float:right; margin-right: 50px;" (click)="removeClick()"> <a> <img src="assets/Image/thoattest.png" height="20px" width="20px" /> </a></div> 
+             <div id="cont" >
+                     <div class="footer_center"  style="overflow:auto;" >
+                            
+                               <div *ngFor="let kiemtras of kiemtra  | paginate:{itemsPerPage: 1, currentPage:p}">
+        
+                                <app-kiemtra [kiemtras]="kiemtras" ></app-kiemtra> -->
+                                <!-- <pagination-controls (pageChange)="p=$event"> </pagination-controls> -->
+                                <!-- <p *ngFor="let cauhois of cauhoi | paginate:{itemsPerPage: 1, currentPage:p}">Câu hỏi: {{cauhois.cauhoi}}</p> -->
+                               <!-- </div>
+                               <pagination-controls (pageChange)="p=$event"> </pagination-controls> -->
+                               <!-- | paginate: {itemsPerPage: 1, CurrentPage:p} -->
+                             
+                   <!-- </div>
+              </div>
+     </div> -->
+     
+

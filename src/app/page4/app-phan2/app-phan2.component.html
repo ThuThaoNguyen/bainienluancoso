@@ -1,0 +1,41 @@
+
+  <div class="col-md-12">
+    <div>
+        <h3>PHÉP TÁCH KHÔNG TỔN THẤT THÔNG TIN  </h3>
+    </div>
+    <p>Xét lược đồ quan hệ R=	&#123;A1, A2, . . . , An	&#125;</p>
+    <p>Tập các phụ thuộc hàm F</p>
+    <p>Phép tách ρ(R1, R2, . . . , Rk)</p>
+    <p><b>Output:</b> Kết luận phép tách ρ không mất mát thông tin.</p>
+    <h6>Các bước của thuật toán</h6>
+    <p><b>Bước 1</b></p>
+    <p>Thiết lập một bảng với n cột (tương ứng với n thuộc tính) và k dòng (tương ứng với k quan hệ), trong đó cột thứ j ứng với thuộc tính Aj, dòng thứ i ứng với lược đồ Ri.Tại dòng i và cột j, ta điền ký hiệu aj nếu thuộc tinh Aj∈Ri.Ngược lại ta điền ký hiệu bij.</p>
+    <p><b>Bước 2</b></p>
+    <p>Xét các phụ thuộc hàm trong F và áp dụng cho bảng trên.</p>
+    <p>Giả sử ta có phụ thuộc hàm X → Y ∈ F, xét các dòng có giá trị bằng nhau trên thuộc tính X thì làm bằng các giá trị của chúng trên Y. Ngược lại làm bằng chúng bằng ký hiệu bij. Tiếp tục áp dụng các phương thức cho bảng (kể cả việc lặp lại các phụ thuộc hàm đã áp dụng) cho tới khi không còn áp dụng được nữa.</p>
+    <p><b>Bước 3</b></p>
+    <p>Xem xét bảng kết quả. Nếu xuất hiện một dòng chứa toàn giá trị a1, a2 ,…,an thì kết luận phép tách ρ không mất mát thông tin.</p>
+    <h6>&nbsp;&nbsp;Cho quan hệ</h6>
+    <img src="assets/Image/chuong4phan2_1.png" height="400px" width="800px" style="margin-left: 80px;">
+    <p style="text-align:center;"><i>Minh họa dữ liệu của quan hệ EMP_DEPT </i></p>
+    <h6>&nbsp;&nbsp;Tách quan hệ trên thành 2 quan hệ</h6>
+    <img src="assets/Image/chuong4phan2_2.png" height="450px" width="800px" style="margin-left: 80px;">
+    <p style="text-align:center;"><i>Quan hệ EMPLOYEE được phân rã (tách) thành 2 quan hệ   </i></p>
+    <h6>&nbsp;&nbsp;Tập phụ thuộc hàm F</h6>
+    <img src="assets/Image/chuong4phan2_3.png" height="450px" width="800px" style="margin-left: 80px;">
+    <p style="text-align:center;"><i>Tập phụ thuộc hàm F</i></p>
+    <p>Kiểm tra phép tách trên là không mất mát thông tin:</p>
+    <p><b>Bước 1</b></p>
+    <img src="assets/Image/chuong4phan2_4.png" height="350px" width="600px" style="margin-left: 100px;">
+    <p><b>Bước 2</b></p>
+    <p>Xét phụ thuộc hàm DNumber→ DName, DMgrSsn. Ta nhận thấy có giá trị a5 ở dòng thứ 2, nên ta sẽ làm bằng giá trị a6, a7 cho dòng thứ 1.</p>
+    <p><b>Bước 3</b></p>
+    <p>Tồn tại một dòng chứa giá trị a1, a2,..a7. Kết luận, phép phân rã trên không mất mát thông tin.</p>
+    <img src="assets/Image/chuong4phan2_5.png" height="350px" width="600px" style="margin-left: 100px;">
+    <p>Sinh viên thực hiện phép nối tự nhiên 2 quan hệ EMPLOYEE và DEPARTMENT trên để kiểm tra có bằng quan hệ ban đầu EMP_DEPT</p>
+
+</div>
+          
+
+    
+

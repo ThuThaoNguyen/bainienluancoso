@@ -1,0 +1,16 @@
+<div>
+    <h3>CÁC KIẾN TRÚC TRUY XUẤT DỮ LIỆU </h3>
+</div>
+<p>Nhìn chung mọi ứng dụng cơ sở dữ liệu đều bao gồm 3 thành phần: </p>
+<p>&nbsp;&nbsp;Thành phần xử lý ứng dụng (Application Processing Component)</p>
+<p>&nbsp;&nbsp;Thành phần phần mềm cơ sở dữ liệu (Database Software Component) </p>
+<p>&nbsp;&nbsp;Thành phần bản thân cơ sở dữ liệu (Database Itself Component)</p>
+<p>Các kiến trúc truy xuất dữ liệu khác nhau ở chỗ các thành phần này được đặt ở đâu trên mạng. Một vài kiến trúc truy xuất dữ liệu quen thuộc là:</p>
+<h5>5.1. Kiến trúc Mainframe – Terminal</h5>
+<p>Kiến trúc này còn được gọi là hệ xử lý từ xa (Teleprocessing). Đây là kiến trúc truyền thông của hệ thống đa người dùng. Một hệ xử lý từ xa bao gồm một mainframe (CPU) và một số terminal như hình vẽ sau đây:</p>
+<img src="http://2.bp.blogspot.com/-FRAwY0wE5tw/UUJHLTGaLiI/AAAAAAAAAKw/q9X9R-BLquI/s1600/Teleprocessing.jpg" height="200px" width="400px" style="margin-left:250px"/>
+<p>Tất cả các xử lý đều được thực hiện trên mainframe. Các terminal nối với mainframe bởi cáp. Trong kiến trúc này mainframe phải thực thi các ứng dụng cơ sở dữ liệu và cả phần mềm hệ quản trị cơ sở dữ liệu thay cho các terminal. </p>
+<h5>5.2. Kiến trúc FileServer - Workstation </h5>
+<p>Trong kiến trúc này việc xử lý không còn tập trung vào mainframe mà được phân tán trên mạng, thường là mạng cục bộ LAN như hình vẽ sau đây:</p>
+<img src="https://3.bp.blogspot.com/-y6xJ3uExgaQ/VArB4CNfqOI/AAAAAAAAAVE/Ns7Xc7YDYDE/s1600/File-Server.png" height="300px" width="500px" style="margin-left:250px"/>
+<p>Trong kiến trúc này, một máy chủ fileserver được kết nối với một số máy trạm Workstation thông qua một mạng cục bộ LAN. Cơ sở dữ liệu sẽ nằm trên fileserver này. Các hệ quản trị cơ sở dữ liệu và các ứng dụng cơ sở dữ liệu chạy trên các wokstation và sẽ gửi yêu cầu các tập tin dữ liệu đến fileserver khi cần đến. Máy chủ fileseryser hoạt động đơn giản như một đĩa cứng chứa dữ liệu có thể chia sẻ. Kiến trúc này có nhược điểm là: tốc độ truy xuất phụ thuộc vào giao thông mạng , mỗi workstation đều phải cài hệ quản trị cơ sở dữ liệu</p>

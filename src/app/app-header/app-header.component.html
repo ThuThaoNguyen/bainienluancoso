@@ -1,0 +1,31 @@
+<div [@bannerAnimation]="selectedIndex" 
+class="banner-container"
+bannerCtrl
+#ctrl="bannerCtrl"
+[itemsLength]="backingItems.length"
+(selectedIndex)="selectedIndex = $event"
+(actualIndex)="actualIndex = $event" style="background-color: #f0edf7;">
+<div *ngFor="let banner of items" style="background-color: #f0edf7;">
+  <header class="masthead" style="position: relative;height: 1800px;background-color: #f0edf7">
+   <img src="{{banner}}" class="masthead" style="width:100%;"> 
+    <div class="container" style="height: 100%;position: absolute; margin-right:-50;margin-left:-50; top:0; background: rgb(5, 48, 90);background: rgb(5, 48, 90, 0.3);" >
+       
+        <div class="intro-text">
+            <marquee behavior="scroll" direction="left" scrollamount="6" style="width:75%" > <!--https://www.html.am/html-codes/marquees/html-scrolling-text.cfm-->
+               <div class="intro-lead-in" ><span>Welcome To Our Website!</span></div>
+               <!-- <div class="intro-heading text-uppercase"><span>It's Nice To Meet You</span></div> -->
+            </marquee>
+            <marquee behavior="scroll" direction="right" scrollamount="7" style="width:75%">
+              <!-- <div class="intro-lead-in" ><span>Welcome To Our Website!</span></div> -->
+              <div class="intro-heading text-uppercase"><span>It's Nice To Meet You</span></div>
+           </marquee>
+       </div>
+ 
+
+
+            
+       
+    </div>
+  </header>
+</div>
+</div>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<link rel="stylesheet" href="assets/app/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/app/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="assets/app/css/Pretty-Header.css">
+    <link rel="stylesheet" href="assets/app/css/sidebar-1.css">
+    <link rel="stylesheet" href="assets/app/css/Sidebar-Menu-1.css">
+    <link rel="stylesheet" href="assets/app/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="assets/app/css/sidebar.css">
+    <link rel="stylesheet" href="assets/app/css/styles.css">
+    <!-- <link rel="stylesheet" href="assets/gd/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie"> -->
+    <link rel="stylesheet" href="assets/gd/css/Pretty-Header.css">
+    <!-- <link rel="stylesheet" href="assets/gd/css/styles.css"> -->
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=2WabtU1tg3Isrf1kNaLJxO_dOSv55nsLFxKmctEdeFDC8vqLAY1Yp0gCkItZ9JKIkCi2r_if1oX4VJEaIjjpIr1tZ7QAofYre_rEXssqM9kmjrpJD0c8vu2rpRQovROmjGUoY6ZjLjL2ogZLRNwdEOhmi0u1SeaauJ2kjVD6ORYNLOiM7p3MrjzxGSJk5YjH5F0z0QliIrChtAUd5gYU1iaTM4gAkd0EJbaNBpNKYHP2XL7yAXfqsMV1qd9eLi_Hr4lozEbuvCLl9PjEGx00t-5vQZBN9day5HaNGG9ieyBbv4__vVOOeI63VwCbtu0glPb6OQG3kDScM7rSKiTBOodFZKFjaYv4nfKOUNr44Khhd-_dZUFyyE2q3R7gjh-Y" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9kb2MtMDgtMWstZG9jcy5nb29nbGV1c2VyY29udGVudC5jb20vZG9jcy9zZWN1cmVzYy9wZHNiOTVpb2JqZmdtMzBmbzZxdXVuYjNkdTU2bzJhaC85OW4wdm40NTRoZXY4bGRuOWI4aXZ1OGFtcWdhdDdmdS8xNTc3MzI1NjAwMDAwLzAzMTQ1ODQzNTg4OTM0NTM3NjM1LzE1NjE2ODM3NjExMDY2MzA1NzI4LzEzMnlpck1nQmVHVlZQRlNOT2lRT3luWnBzSVNVS0FwMT9oPTE1NTIzOTI5NDk4NDU2MTA2MzcxJmU9ZG93bmxvYWQmYXV0aHVzZXI9MQ"/></head>
+<body >
+<div id="yy">
+    <nav class="navbar navbar-light navbar-expand-md custom-header" style="background-color: rgb(5,48,90);">
+        <div class="container-fluid"><a class="navbar-brand" href="#" style="background-color: rgb(5,48,90);color: rgb(255,255,255);margin-right: 30px;font-size: 38px;">Q&amp;A Database</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navbar-collapse" style="background-color: #05305a;color: rgb(255,255,255);">
+                <ul class="nav navbar-nav links">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href=""  routerLinkActive="active"  style="background-color: rgb(5,48,90);">Tổng quan CSDL</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href=""  [routerLink]="'/page2'"  style="background-color: rgb(5,48,90);">Đại số quan hệ</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href=""  [routerLink]="'/page3'"  style="background-color: rgb(5,48,90);">Phụ thuộc hàm và khóa</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href=""  [routerLink]="'/page4'"  style="background-color: rgb(5,48,90);">Chuẩn hóa LĐQH</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href=""  [routerLink]="'/page5'" style="background-color: rgb(5,48,90);">SQL</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href=""  routerLink="'/page6'" style="background-color: rgb(5,48,90);">Thông tin học phần</a></li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                        <div class="nav navbar-nav ml-auto"><li><a href="" routerLink="">Home</a></li></div>
+                    
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <div id="wrapper">
+        <div id="sidebar-wrapper" style="background-color: rgb(11,35,63);">
+            <ul class="sidebar-nav">
+                <li> <a  (click)="clickback()" [style.background-color]="page==false?'#f7b733':''" [style.color]="page==false?'white':''" [style.border-right-color]="page==false?'#dfdce3':''" style="font-size: 20px;background-color: #f7b733; color:white; border-right:5px solid #dfdce3;">Trước khi có Hệ CSDL</a></li>
+                <li> <a [style.background-color]="page2==true&&page==true?'#f7b733':''" [style.color]="page2==true&&page==true?'white':''" [style.border-right-color]="page2==true&&page==true?'#dfdce3':''" (click)="clickphan2()" [routerLink]="'phan2'" routerLinkActive="active" style="font-size: 16px;">Cách tiếp cận bằng hệ CSDL</a>
+                <li> <a  [style.background-color]="page3==true&&page==true?'#f7b733':''" [style.color]="page3==true&&page==true?'white':''" [style.border-right-color]="page3==true&&page==true?'#dfdce3':''" (click)="clickphan3()" [routerLink]="'phan3'" routerLinkActive="active" style="font-size: 16px;">Mô hình dữ liệu</a>
+                <li> <a [style.background-color]="page4==true&&page==true?'#f7b733':''" [style.color]="page4==true&&page==true?'white':''" [style.border-right-color]="page4==true&&page==true?'#dfdce3':''" (click)="clickphan4()" [routerLink]="'phan4'" routerLinkActive="active"  style="font-size: 16px;">Hệ quản trị CSDL</a>
+                <li> <a [style.background-color]="page5==true&&page==true?'#f7b733':''" [style.color]="page5==true&&page==true?'white':''" [style.border-right-color]="page5==true&&page==true?'#dfdce3':''" (click)="clickphan5()" [routerLink]="'phan5'" routerLinkActive="active"  style="font-size: 16px;">Các kiến trúc truy suất DL</a>
+                <li> <a  [style.background-color]="page6==true&&page==true?'#f7b733':''" [style.color]="page6==true&&page==true?'white':''" [style.border-right-color]="page6==true&&page==true?'#dfdce3':''" (click)="clickphan6()" [routerLink]="'phan6'" routerLinkActive="active" style="font-size:16px;">Con người trong hệ CSDL</a></li>
+            </ul>
+        </div>
+   
+        <div class="page-content-wrapper"style="margin:10px 135px 10px 35px;padding:20px; background-color:white; height:650px; overflow:auto;font-size:13px;color:black;font-family: 'Times New Roman', Times, serif;">
+            <div [style.display]="page==false?'none':'block'">
+                 <router-outlet></router-outlet>
+            </div>
+            <div class="container-fluid" [style.display]="page==true?'none':'block'">
+                <div class="row"style="color:black;font-family: 'Times New Roman', Times, serif;">
+                    <div class="col-md-12">
+                        <div>
+                            <h3>Trước khi có hệ cơ sở dữ liệu</h3>
+                        </div>
+                        <p>1.1 Hệ thống dựa trên file(Files Based Systems)</p>
+                        <p>Một cách để giữ thông tin trên máy vi tính.  Mỗi hệ thống (quản lý) có một số chương trình 
+                            ứng dụng, mỗi cái trong số chúng được định nghĩa đi thao tác trên các liệu tương ứng. Các chương trình ứng dụng được viết theo yêu của người
+                            dùng trong tổ chức. Ứng dụng mới sẽ được thêm vào hệ thống khi có nhu cầu.
+                            Một hệ thống như vậy được gọi là hệ thống dựa trên file.<i>&nbsp;Đặc điểm của hệ thống dựa trên file là mỗi chương trình ứng dụng định nghĩa và quản lý dữ liệu của chính nó.</i></p>
+                        <p>1.2 Các nhược điểm của hệ thống dựa trên file</p>
+                        <p>1. Sự dư thừa dữ liệu(Data Redundance)</p>
+                        <p>Vì các file dữ liệu và các chương trình ứng dụng đucợ tạo ra bởi các lập trình viên của các bộ phận khác nhau
+                         trong một khoảng thời gian dài nên có thể dẫn đến một số vấn sau:</p>
+                        <p>- Sự không thống nhất về định dạng dữ liệu.</p>
+                        <p>- Cùng một thông tin có thể được lưu trữ trong nhiều file dữ liệu.</p>
+                        <p>- Sự không thống nhất về dữ liệu</p>
+                        <p>- Không gian lưu trữ tăng</p>
+                        <p>2. Sự cô lập dữ liệu(Data Isolation)</p>
+                        <p>Khi phát sinh một ứng dụng mới nó khó có thể sử dụng các dữ liệu trong các file dữ liệu khác nhau, nó phải tự tổ chức lấy.</p>
+                        <p>3. Các vấn đề về tính toàn vẹn(Integrity Problems)</p>
+                        <p>Nhược điểm về tính toàn vẹn thể hiện qua các vấn đề: </p>
+                        <p>- Các giá trị dữ liệu trong các file dữ liệu khác nhau khó thỏa các ràng buộc toàn vẹn.</p>
+                        <p>- Khó có thể thêm vào các ràng buộc toàn vẹn mới mà các dữ liệu trong các file khác nhau điều thỏa mãn.</p>
+                        <p>4. Các vấn đề về bảo mật(Security Problems)</p>
+                        <p>5. Điều khiển truy suất cạnh tranh(Concurrence Access Control)</p>
+                        <p>Khi một mục dữ liệu có thể được truy suất đồng thời bởi nhiều ứng dụng, các ứng dụng này không thể đucợ phối hợp trước nên không dễ đưa ra chiến lược hỗ trợ cho nhiều người dùng truy suất dữ liệu đồng thời</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div  class="media1"  (click)="clickvideo()"  [routerLink]="'video'" routerLinkActive="active"><img src="assets/Image/video.png"  class="icon-footer" />  </div>  
+<div  class="media2"  (click)="clickgiaotrinh()" [routerLink]="'giaotrinh'" routerLinkActive="active"><img src="assets/Image/book.png"  class="icon-footer" />  </div>  
+<div  class="media3"  (click)="clickbaitap()" [routerLink]="'baitap'" routerLinkActive="active"><img src="assets/Image/tl.png"  class="icon-footer" />  </div> 
+
+</body><!-- <div class="footer">
+    <div id="icon" (click)="setClick()"  >
+             <div class="icon1"><img src="/assets/Image/text.png"  class="icon-footer" /> </div>  
+    </div>
+
+ <div [style.display]="value==true?'inline':'none'" id="container" class="footer-head" >
+       <div style="float:right; margin-right: 40px;" (click)="removeClick()"> <a> <img src="assets/Image/thoattest.png" height="20px" width="20px" /> </a></div> 
+        <div id="cont" >
+                <div class="footer_center"  style="overflow:auto; font-size: 13px;" >
+                       
+                          <div *ngFor="let kiemtras of kiemtra  | paginate:{itemsPerPage: 1, currentPage:p}">
+   
+                           <app-kiemtra [kiemtras]="kiemtras" ></app-kiemtra>
+                            <pagination-controls (pageChange)="p=$event"> </pagination-controls> -->
+                           <!-- <p *ngFor="let cauhois of cauhoi | paginate:{itemsPerPage: 1, currentPage:p}">Câu hỏi: {{cauhois.cauhoi}}</p> -->
+                          <!-- </div>
+                          <pagination-controls (pageChange)="p=$event"  style="font-size: 13px ;"> </pagination-controls> -->
+                          <!-- | paginate: {itemsPerPage: 1, CurrentPage:p} -->
+                        
+              <!-- </div>
+         </div>
+</div> --> 

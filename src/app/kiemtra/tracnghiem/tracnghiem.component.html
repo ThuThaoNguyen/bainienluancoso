@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>kiemtra3</title>
+        <link rel="stylesheet" href="assets/bode/assets/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguafina+Script">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alex+Brush">
+        <link rel="stylesheet" href="assets/bode/assets/css/Navigation-with-Search.css">
+        <link rel="stylesheet" href="assets/bode/assets/css/sidebar-1.css">
+        <link rel="stylesheet" href="assets/bode/assets/css/Sidebar-Menu-1.css">
+        <link rel="stylesheet" href="assets/bode/assets/css/Sidebar-Menu.css">
+        <link rel="stylesheet" href="assets/bode/assets/css/sidebar.css">
+        <link rel="stylesheet" href="assets/bode/assets/css/styles.css">
+        <style>
+        .row2{
+        width: 20%;
+        margin: 15px;
+        float:right;
+    }
+        </style>
+    </head>
+
+<body style="background-color:  #e1e1d0; font-family: 'Open Sans';" >
+
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="background-color: #05305A; height: 80px">
+        <div class="container"><a class="navbar-brand" href="#" style="font-family:'Open Sans'; font-size: 40px; color: white">Q&A Database</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <form class="form-inline mr-auto" target="_self">
+                    <div class="form-group"><label for="search-field"><i class="fa fa-search" style="font-size: x-large;"></i></label><input class="form-control search-field" type="search" name="search" id="search-field" [(ngModel)]="textsearch"  (change)="search()" style="font-size: 15px; color: snow;"></div>
+                </form>
+                
+                <ul>
+                    <li>
+                        <a  role="button"  href="#" style="background-color: #F8D24B;"><b>Trang chủ</b> </a>
+                    </li>
+                </ul>
+
+ 
+            </div>
+        </div>
+
+    </nav>
+<!-- <form> -->
+<div class="container-fluid">
+    
+
+    <div class="row">
+           
+
+            <div class="col-xs-6 col-sm-2 col-md-offset-1"  style="margin-top:20px; " >
+                <div class="shadow-lg p-2 mb-6 bg-white rounded" style="background-color: white; font-size: 20px; position: fixed; " >
+
+                    <table class=" table-hover" style="width: 180px;">
+                        <tbody>
+                            <tr  >
+                                <th style="color:  #f7b733;">
+                                    Kiểm tra
+                                    <!-- <a (click)="getclear()"> <img  (click)=" goback()" class="img-responsive" src="assets/bode/assets/img/backicon.png" width="25%" height="25%" style="margin-left: 60px;"> </a> -->
+                                 </th>
+                            </tr>
+                            <hr>
+                            <tr *ngFor ="let de of de">
+                                <th *ngIf="de.type==type" ><a (click)="getclear()" style="color: #f7b733;">{{de.tende}}</a></th>
+                            </tr>
+                            <hr>
+                            <tr >
+                                <th style="text-align: center;" ><countdown #cd [config]="{leftTime:1200}" (event)="handleEvent()" ></countdown>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>{{ipAddress}}</th>
+                            </tr>
+                       </tbody>
+                    </table>
+                        <!-- <ul  >
+                                <li class="sidebar-brand"> <a href="#" >Học </a></li>
+                                <hr>
+                                <li> <a (click)="getclear()">Kiểm tra</a></li>
+                        </ul> -->
+                </div>
+            </div>
+         
+          
+            <!-- Add the extra clearfix for only the required viewport -->
+            <div class="clearfix visible-xs-block">
+
+                <div class="col-xs-6 col-sm-2"  style="margin-top:5px; " >
+                    <div class="shadow-lg p-2 mb-6 bg-white rounded" style="background-color: white; font-size: 20px;" >
+    
+                        <table class=" table-hover" style="width: 180px;">
+                            <tbody>
+                                <tr  >
+                                    <th style="color: #F8D24B;">
+                                         Kiểm tra
+                                        <!-- <a  > <img  (click)=" goback()" class="img-responsive" src="assets/bode/assets/img/backicon.png" width="25%" height="25%" style="margin-left: 60px;"> </a>  -->
+                                    </th>
+                                </tr>
+                                <hr>
+                                <tr *ngFor ="let de of de">
+                                    <th *ngIf="de.type==type" ><a (click)="getclear()" style="color: #F8D24B;">{{de.tende}}</a></th>
+                                </tr>
+                           </tbody>
+                        </table>
+                            <!-- <ul  >
+                                    <li class="sidebar-brand"> <a href="#" >Học </a></li>
+                                    <hr>
+                                    <li> <a (click)="getclear()">Kiểm tra</a></li>
+                            </ul> -->
+                    </div>
+                </div>
+
+            </div>
+          
+            <div class="col-xs-10 col-sm-6 col-md-6 shadow-lg bg-white rounded" style="margin-top: 20px; font-family: 'Times New Roman', Times, serif;">
+
+                        <div ><a class="btn btn-link" role="button" href="#menu-toggle" id="menu-toggle"></a>
+                            
+                            <div class="row" style="background-color: white;" >
+                                <!-- img test-->
+                                <!-- <div *ngFor ="let de of de" style="margin: auto; width: 80%;">
+                                    <div   *ngIf="de.type==type">
+                                        <img  src="{{de.link}}">
+                                    </div>
+                                </div> -->
+                            
+                                <!-- test -->
+                                <!-- <div *ngFor ="let kt of kt;"> -->
+                                    <!-- <div *ngIf="tempttn"> -->
+                                <div *ngFor ="let kt of kt; let i = index;" style="background-color: white;padding: 0 80px 0 60px; ">
+                                    <div *ngIf="kt.type==type"  >
+                                        
+                                        <h1 style="font-size: 20px; margin-top: 20px; margin-left: 50px;" ><b>{{sophantu(i,kt.type)}}. {{kt.cauhoi_kt}}</b></h1>
+                                        <!-- <h1 style="font-size: 16px; margin-top: 20px; margin-left: 50px;" ><b>{{i}}. {{kt.cauhoi_kt}}</b></h1> -->
+                                        <br><br>
+                                        <label class="container" style="margin-left: 50px;" [style.background-color]="kt.rightA==true?'rgb(144, 233, 85)':'none'" [style.background-color]="kt.wrongA==true?'rgb(255, 148, 148)':'none'">{{kt.A}}
+                                            <input type="radio"  value="A" name='{{kt.key}}'  [(ngModel)]="player.traloiuser" (click)="dapancheck(kt.key,'A')">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="container"style="margin-left: 50px;" [style.background-color]="kt.rightB==true?'rgb(144, 233, 85)':'none'" [style.background-color]="kt.wrongB==true?'rgb(255, 148, 148)':'none'">{{kt.B}}
+                                            <input type="radio"  value="B"  name='{{kt.key}}'  [(ngModel)]="player.traloiuser"  (click)="dapancheck(kt.key,'B')" >
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="container" style="margin-left: 50px;" [style.background-color]="kt.rightC==true?'rgb(144, 233, 85)':'none'" [style.background-color]="kt.wrongC==true?'rgb(255, 148, 148)':'none'">{{kt.C}}
+                                            <input type="radio"  value="C" name='{{kt.key}}'    [(ngModel)]="player.traloiuser" (click)="dapancheck(kt.key,'C')" >
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                            <br>
+                                       
+            
+                                        <br>
+                                       
+            
+                                        <!-- <button (click)="xemdapan(kt.key,kt)"  class="btn btn-warning" type="button" style="margin: 7px 0 7px 50px; background: #f7b733; color: snow;  font-size: 15px; ">&nbsp;&nbsp;Đáp&nbsp;&nbsp;án&nbsp;&nbsp;</button>
+                                        <button type="button" class="btn btn-default" [style.display]="kt.status==true?'inline':'none'" style="font-size: 18px;margin-left: 30px; color: red" (click)="clear(kt.key,kt)" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{kt.traloi_kt}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>  -->
+
+                                        <!-- <br> -->
+                                        <div style="margin-left: 50px;">
+                                            <!-- <label  class="text-danger" [style.display]="kt.status==true?'inline':'none'" style="font-size: 14px;margin-left: 30px; color:black" (click)="clear(kt.key,kt)" >{{kt.traloi_kt}} </label>  -->
+                                        </div>
+                                    </div> <!-- end col-xl-10 -->
+                                </div>  <!-- end *ngFor -->
+
+                                <!-- </div> -->
+                                <!-- </div> -->
+
+                             </div><!-- end row -->
+                    </div> <!-- end div -->
+
+                    <div  style="height: 150px;margin-top: 10px;" >
+                        <p class="col-md-6 col-md-offset-3" style="font-size: x-large;" >&nbsp;&nbsp;&nbsp;&nbsp;Số câu đúng: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label style="font-size: 35px;" >{{a}}</label> </p>
+                            <!-- <button class="btn btn-primary" type="button" style="width: 100%;height: 50px;text-align: center; margin-top: 30px;font-size: 20px;"    (click)="getchuoi(type)" (click)="cd.stop()">Xem đánh giá</button> -->
+                            <!-- <button class="btn btn-primary" type="button" style="width: 100%;height: 50px;text-align: center; margin-top: 30px;font-size: 20px;"    (click)="getchuoi(type)">Xem đánh giá</button> -->
+                          
+                    </div>
+                
+            </div>  <!-- end col-xs-11 col-sm-5 col-md-6 -->
+
+
+            <div class="col-xs-4 col-sm-2"  style="margin-top:20px;">
+
+                <div   *ngFor ="let de of de" id="dsde">
+                        <!-- <div  *ngIf = "de.loai == 'tự luận'" class="shadow-lg p-2 mb-6 bg-white rounded" id="dsde"> -->
+                            <div  *ngIf = "de.loai == 'trắc nghiệm'"  style="border: 1px solid #E5E5E5; margin: 5px; border-radius:20px ;padding: 3%; display:inline-block; background-color: white;">
+                          
+                             <a style="font-size: 15px; color: #AAAAAC; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; " (click)="chuyende(de.type)" (click)="getclear()">{{de.tende}}</a>
+                      
+                        </div>
+                </div>
+
+            </div> <!-- end col-xs-6 col-sm-3 -->
+          
+
+            <div  class="col-md-6 col-md-offset-3" style="height: 150px;">
+                    <button class="btn btn-primary" type="button" style="width: 100%;height: 50px;text-align: center; margin: 30px 0 15px 0;font-size: 20px; color: #34C6F1;" (click)="getchuoi(type)" (click)="sendMessage()">Xem đánh giá {{a}}</button>
+                    <img (click)=" goback()" (click)="getclear()" class="img-responsive" src="assets/bode/assets/img/backicon.png" width="9%" height="9%" style="margin-left: auto; margin-right: auto;">
+            </div>
+
+    </div> <!-- end first row -->
+</div> <!-- end container-fluid -->
+<!-- </form> -->
+
+
+
+
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Sidebar-Menu.js"></script>
+
+
+  
+</body>
+
+
+</html>
+

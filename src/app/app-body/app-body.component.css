@@ -1,0 +1,26 @@
+@media (min-width:768px) {
+  section {
+    padding: 150px 0;
+    height: 743px;
+    width: 1349px;
+  }
+}
+
+
+.col-md-4 {
+    color: black;
+}
+.col-md-4 a:link{
+   color:rgb(33,37,41);
+   text-decoration:none;}
+ .col-md-4 a:visited{color:#C2BBBB;}
+ .col-md-4 a:hover{color: #fed136;}
+ .col-md-4 a:active{color:#292E35;}
+ .text-primary {
+    color: #fed136!important;
+  }
+  
+h4 {
+    font-weight: 700;
+font-family: Montserrat,Helvetica Neue,Helvetica,Arial,sans-serif;
+}  

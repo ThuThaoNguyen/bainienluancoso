@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>gdassets/kiemtra</title>
+    <link rel="stylesheet" href="assets/kiemtra/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/kiemtra/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/kiemtra/css/Article-List.css">
+    <link rel="stylesheet" href="assets/kiemtra/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/kiemtra/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="assets/kiemtra/css/Sidebar-Menu-1.css">
+    <link rel="stylesheet" href="assets/kiemtra/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="assets/kiemtra/css/styles.css">
+    <link rel="stylesheet" href="assets/kiemtra/css/Vertical-Mobile-Collapsible-Menu.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguafina+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alex+Brush">
+    <!-- <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="assets/css/styles.css"> -->
+</head>
+
+<body>
+
+
+     
+<div [style.display]="page==true?'block':'none'"><router-outlet></router-outlet></div>
+<div [style.display]="page==true?'none':'block'"> 
+   <!-- <app-navbarmain></app-navbarmain> -->
+   <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style=" position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 70px;
+   padding: 9px 15px;
+   background: #05305a;
+   border-bottom: 1px solid #32bee9;
+   z-index: 1; ">
+    <div class="container"><a class="navbar-brand" href="#" style="font-family: 'Alex Brush', cursive; font-size: 40px; color: white">Q&A Database</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div
+            class="collapse navbar-collapse" id="navcol-1">
+            <form class="form-inline mr-auto" target="_self">
+                <!-- <div class="form-group"><label for="search-field"><i class="fa fa-search" style="font-size: x-large;"></i></label><input class="form-control search-field" type="search" name="search" id="search-field" style="font-size: 15px; color: snow;"></div> -->
+            </form>
+            
+            <ul>
+                <li>
+                    <a [routerLink]="'/kiemtra'" routerLinkActive="active"class="main" (click)="convert()" ><b>Kiểm tra</b></a>
+                </li>
+            </ul>
+            
+            
+        </div>
+    </div>
+</nav>
+ <div style="height: 70px;"></div>
+ <app-header></app-header>
+ <div class="features-blue"  style="background-color: #f0edf7;" >
+        <div class="container" style="background-color: #f0edf7">
+            <div class="intro"></div>
+            <div class="row features" style="margin: 20px 10px;padding: 30px;background-color: #f0edf7;">
+
+                <div class="col-sm-6 col-md-4 item" style="border-radius: 15px;"[routerLink]="'/page1'" routerLinkActive="active"  (click)="convert()">
+                    <a href="#" [routerLink]="'/page1'" routerLinkActive="active" class="main" (click)="convert()">
+                       <i class="fa fa-rocket icon" style="color:#083f77;font-size: 80px;margin: 30px -20px;"></i>
+                       <h3 class="name" style="height: 30px;margin: 40px -10px 40px 60px;font-family: 'Abril Fatface', cursive;font-size: 30px;">Tổng quan CSDL</h3>
+                       <p class="description"></p>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 item" style="border-radius: 15px;" [routerLink]="'/page2'" routerLinkActive="active" (click)="convert()">
+                   <a href="#" [routerLink]="'/page2'" routerLinkActive="active" class="main" (click)="convert()">
+                       <i class="fa fa-close icon" style="color: #083f77;height: 80px;margin: 30px 0px 30px -40px;font-size: 80px;"></i>
+                       <h3 class="name" style="height: 30px;margin: 50px 20px 40px 10px;font-size: 30px;font-family: 'Abril Fatface', cursive;">Đại số quan hệ</h3>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 item" style="border-radius: 15px;"[routerLink]="'/page3'" routerLinkActive="active"  (click)="convert()">
+                    <a href="#" [routerLink]="'/page3'" routerLinkActive="active" class="main" (click)="convert()">
+                       <i class="fa fa-lock icon" style="color: #083f77;font-size: 80px;margin: 30px 0px 30px -40px;"></i>
+                       <h3 class="name" style="margin: 40px 20px 40px 20px;font-family: 'Abril Fatface', cursive;font-size: 30px;">Phụ thuộc hàm và khóa</h3>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 item" style="border-radius: 15px;"[routerLink]="'/page4'" routerLinkActive="active"  (click)="convert()">
+                    <a href="#" [routerLink]="'/page4'" routerLinkActive="active" class="main" (click)="convert()">
+                       <i class="fa fa-table icon" style="color: #083f77;font-size: 80px;margin: 30px -20px;"></i>
+                       <h3 class="name" style="margin: 40px 20px 40px 60px;font-family: 'Abril Fatface', cursive;font-size: 30px;">Chuẩn hóa lược đồ quan hệ</h3>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 item" style="border-radius: 15px;"[routerLink]="'/page5'" routerLinkActive="active" (click)="convert()">
+                    <a href="#" [routerLink]="'/page5'" routerLinkActive="active"class="main" (click)="convert()">
+                      <i class="fa fa-database icon" style="color:  #083f77;font-size: 80px;margin: 30px -20px;"></i>
+                      <h3 class="name" style="margin: 60px 0px 40px 70px;font-family: 'Abril Fatface', cursive;font-size: 30px;">SQL</h3>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 item" style="border-radius: 15px;"routerLink="/page6" (click)="convert()" >
+                    <a href="#" routerLink="/page6" class="main" (click)="convert()">
+                      <i class="fa fa-info-circle icon" style="color: #083f77;font-size: 80px;margin:30px 0px 30px -40px;"></i>
+                      <h3 class="name" style="margin: 40px 20px 40px 20px;font-family: 'Abril Fatface', cursive;font-size: 30px;">Thông tin học phần</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <app-mainfooter></app-mainfooter>
+   
+</div>
+
+<!-- <div class="footer">  
+    <div id="icon"  >
+             <div class="icon1"><a href="#" [routerLink]="'/kiemtra'" routerLinkActive="active"class="main" (click)="convert()"><img src="/assets/Image/testicon1.png"  class="icon-footer" /></a> </div>
+     </div>
+</div> -->
+
+<!-- <app-kiemtra></app-kiemtra> -->
+
+<app-chatbox></app-chatbox>
+
+
+<script src="assets/kiemtra/js/jquery.min.js"></script>
+<script src="assets/kiemtra/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/kiemtra/js/Sidebar-Menu.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

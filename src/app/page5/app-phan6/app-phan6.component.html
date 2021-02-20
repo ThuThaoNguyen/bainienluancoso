@@ -1,0 +1,10 @@
+<div>
+    <h3>Truy vấn trên nhiều bảng </h3>
+</div>
+<p>Câu lệnh SELECT có thể truy vấn trên nhiều bảng . Khi đó có nhiều bạn là nhau được liệt kê sau mệnh đề FROM , chúng được ngăn cách với nhau dấu phẩy . Một cách tổng quát người ta dùng mệnh đề WHERE để mô tả kế các cột của nhiều bảng khác nhau . Thông thường người ta có đặt tả tên bang các cột để tránh sự lẫn lộn theo cú pháp : </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;TableName.ColumnName . </p>
+<p>Ví dụ , hãy cho biết mã phòng và tên phòng mà nhân viên Le Quynh Nhu đang làm việc : </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;SELECT nhanvien.maphong , phong.tenphong </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;From nhanvien , phong  </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;WHERE nhanvien.ma phong = phong.maphorng AND nhanvien . hoten= ' Le Quynh Nhu ’ </p>
+<p>Người ta thường đặt bi danh cho các bảng được liệt kê trong mệnh đề TO thay cho tên bảng . Khi đã đặt bí danh cho bảng thì phải sử dụng nó thay vì bảng trong toàn bộ lệnh SELECT . </p>

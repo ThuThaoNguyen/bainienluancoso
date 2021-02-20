@@ -1,0 +1,23 @@
+<div class="col-md-12">
+    <div>
+        <h3>Các ví dụ</h3>
+    </div>
+         <p>Ví dụ: hãy cho biết mã nhân viên của các nhân viên là thư ký hoặc có trình độ B Anh văn . </p>
+         <p>&nbsp;&nbsp;SELECT DISTINCT a . many </p>
+         <p>&nbsp;&nbsp;FROM nhanvien AS a , tdonn AS b </p>
+         <p>&nbsp;&nbsp;WHERE a . Congviec = " Thu ky ' or (a . many = b . many AD b . ngoaingu = ' Anh van ' AND b . bangcap = ' B ' ) </p>
+         <p>Ví dụ: hãy cho biết mã nhân viên của các thư ký có trình độ Anh văn là B . </p>
+         <p>&nbsp;&nbsp;SELECT a . manv </p>
+         <p>&nbsp;&nbsp;FROM nhanvien AS a , tdonn AS b  </p>
+         <p>&nbsp;&nbsp;WHERE a . many = b . many AND a . congviec = " Thu ky ' AND b . ngoaingu = ' Anh van ' AND b . bangcap = ' B '  </p>
+         <p>Hay là </p>
+         <p>&nbsp;&nbsp;SELECT manv  </p>
+         <p>&nbsp;&nbsp;FROM nhanvien  </p>
+         <p>&nbsp;&nbsp;WHERE congviec = ' Thu ky ' AND manv IN ( </p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    SELECT manv FROM tdonn  </p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WHERE ngoaingu= ‘anh văn’   AND bangcap= ‘B’ )</p>
+        
+</div>
+          
+
+    

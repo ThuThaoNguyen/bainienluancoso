@@ -1,0 +1,138 @@
+<!---icon CHATBOX -->
+
+<div class="container1 text-center">  
+  <div class="row" (click)="setclick()">
+
+     <div class="round hollow text-center">
+       <a  id="addClass"><img src="assets/Image/chaticon.png"  height='60px' width='60px'></a>
+    </div>
+  </div>
+</div>
+<!--  chatbox -->
+
+<div [style.display]="value==true?'inline':'none'"  class="popup-box chat-popup" id="qnimate" >
+  <!-- heard chatbox -->
+  <div class="popup-head">
+      <div class="popup-head-left pull-left"><img src="assets/Image/69505491_2713782395307625_5637413668585996288_n.png" alt="iamgurdeeposahan"/> Hỏi nhanh</div>
+        <div class="popup-head-right pull-right">
+          <button style="border: 1px solid white;"(click)="removeclick()" data-widget="remove" id="removeClass" class="chat-header-button pull-right" type="button"> <img src="assets/Image/shutdown-icon-11-256.png"  height='13px' width='13px'/></button>
+      
+        </div>
+  </div>
+
+  <!-- content chatbox -->
+  <div class="popup-messages" style="overflow:auto;height:450;">
+    <div class="direct-chat-messages" style=" overflow:auto; padding: 10px;transform: translate(0px, 0px);height:auto;">
+              
+    <!-- boss -->
+        <!-- <div class="chat-box-single-line">
+        
+        </div>
+     -->
+    
+        <!-- Message. Default to the left -->
+              <div class="direct-chat-msg doted-border">
+                <div class="direct-chat-info clearfix">
+                  <span class="direct-chat-name pull-left">Boss</span>
+                </div>
+                <!-- /.direct-chat-info -->
+                <img alt="message user image" src="assets/Image/69505491_2713782395307625_5637413668585996288_n.png" class="direct-chat-img"/><!-- /.direct-chat-img -->
+                <div class="direct-chat-text" style="  background: #b5e4f0 none repeat scroll 0 0;
+                border: 1px solid #d2d6de;
+                border-radius: 5px;
+                color: rgb(5, 5, 4);
+                font-size:16px;
+                margin: 5px 0 0 50px;
+                padding: 5px 10px;
+                position: relative;" >
+                  Hey, Chào {{name}}. Câu hỏi của bạn là gì?
+                </div>
+
+                 <div class="direct-chat-info clearfix">
+                     <span class="direct-chat-img-reply-small pull-left">
+        
+                    </span>
+                    <span class="direct-chat-reply-name">answer</span>
+                 </div>
+                <!-- /.direct-chat-text -->
+               </div>
+              <!-- /.direct-chat-msg -->
+       <!-- sinh vien hoi -->
+    <div [style.display]="submit==true?'block':'none'" >
+      <div>
+        <!-- <div class="chat-box-single-line"> </div> -->
+            <!-- Message. Default to the left -->  
+              <div class="direct-chat-msg doted-border">
+                 <div class="direct-chat-info clearfix">
+                  <span class="direct-chat-name pull-left">You</span>
+                 </div>
+                <!-- /.direct-chat-info -->
+                <img alt="iamgurdeeposahan" src="assets/Image/images.png" class="direct-chat-img"/><!-- /.direct-chat-img -->
+                <div class="direct-chat-text"style="  background: #b5e4f0 none repeat scroll 0 0;
+                border: 1px solid #d2d6de;
+                border-radius: 5px;
+                color: rgb(5, 5, 4);
+                margin: 5px 0 0 50px;
+                padding: 5px 10px;
+                font-size:16px;
+                position: relative;" >
+                {{cauhoi}} </div>
+      
+                <div class="direct-chat-info clearfix"  style="display: block;font-size: 12px;margin-bottom: 0;">
+                   <img alt="iamgurdeeposahan" src="assets/Image/69505491_2713782395307625_5637413668585996288_n.png"  class="direct-chat-img big-round" style=" margin: -9px 0 0 !important;"/>
+                  <span class="direct-chat-reply-name">ask</span>
+                </div>
+                <!-- /.direct-chat-text -->
+              </div>
+              <!-- /.direct-chat-msg -->
+        </div>
+        <!-- <div class="chat-box-single-line"></div> -->
+  <!-- boss tra loi -->
+
+        <div [style.display]="submit==true&& exit==true?'block':'none'"  >
+      <!-- Message. Default to the left -->
+              <div class="direct-chat-msg doted-border" >
+                 <div class="direct-chat-info clearfix">
+                    <span class="direct-chat-name pull-left">Boss</span>
+                  </div>
+                  <!-- /.direct-chat-info -->
+                  <img alt="message user image" src="assets/Image/69505491_2713782395307625_5637413668585996288_n.png" class="direct-chat-img"/><!-- /.direct-chat-img -->
+                  <div class="direct-chat-text" style=" font-size:16px; background: #b5e4f0 none repeat scroll 0 0;border: 1px solid #d2d6de;border-radius: 5px;color: rgb(5, 5, 4);margin: 5px 0 0 50px;padding: 5px 10px;position: relative;" >
+                     {{dapan}}
+                      
+                  </div>
+  
+                  <div class="direct-chat-info clearfix">
+                       <span class="direct-chat-img-reply-small pull-left">
+          
+                       </span>
+                       <span class="direct-chat-reply-name">answer</span>
+                  </div>
+                  <!-- /.direct-chat-text -->
+              </div>
+                <!-- /.direct-chat-msg -->
+      
+        </div>
+      </div>
+     </div>
+     <!-- <div *ngFor="let cauhoi_traloi of cauhois" >
+        <div *ngIf="cauhoi_traloi&& cauhoi_traloi.traloi!=null">
+            <div  (click)= "similarities(question,cauhoi_traloi.cauhoi)">cauhoi</div>
+        </div>
+      </div> -->
+  </div>
+
+<!-- footer cua khung chat -->
+   
+        <div class="popup-messages-footer"  >
+           <textarea type="text" id="status_message" placeholder="Type a message..."  name="message" [(ngModel)]="question" [(ngModel)]="cauhoimoi.cauhoi"></textarea>
+   
+              <div class="btn-footer" >
+                  <button class="bg_none pull-right" type='submit' style="background-color: #dfdce3;" ><img src="assets/Image/paper-plane-icon-15.jpg" class="turn"   (click)="send(question)" (click)="getchuoi()"/> </button>
+                  <!-- (click)="save()"  -->
+              </div>
+           
+      
+      </div>
+</div>  
+<!--- CHATBOX -->

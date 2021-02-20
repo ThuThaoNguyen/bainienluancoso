@@ -1,0 +1,30 @@
+<div class="col-md-12">
+        <div>
+    <h3>PHỦ TỐI THIỂU </h3>
+        </div>
+        <h5> 5.1. Tập hợp phụ thuộc hàm tương đương  </h5>
+        <h6>Định nghĩa</h6>
+        <p>Một phủ tối thiểu của tập phụ thuộc hàm F là một tập phụ thuộc hàm G, Trong đó: G tương đương với F (tức là G+ = F+)</p>
+        <p>Tất cả các phụ thuộc hàm trong G đều có dạng X → A Trong đó A là một thuộc tính.Không thể làm cho G nhỏ hơn được nữa. (Tức là không thể xoá thêm bất kỳ phụ thuộc hàm nào trong G hay xoá đi bất kỳ một thuộc tính nào bên phía phải, phía trái của mỗi phụ thuộc hàm mà G vẫn tương đương với F).</p>
+        <p>Các phụ thuộc hàm hay các thuộc tính xoá được theo cách trên mà vẫn đảm bảo G tương đương với F thì ta gọi đó là phụ thuộc hàm hay thuộc tính dư thừa.</p>  
+        <p><b>Phương pháp tìm phủ tối thiểu</b></p>      
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.	Tách mỗi phụ thuộc hàm trong F có dạng X → A1 A2 A3…An thành các phụ thuộc hàm mà vế phải (RH – Right Hand) chỉ có một thuộc tính:</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X → A1</p> 
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X → A2</p>   
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;………</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X → An</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.	Loại bỏ các thuộc tính dư thừa bên phía trái của mỗi phụ thuộc hàm.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.	Duyệt từng phụ thuộc hàm và kiểm tra xem có dư thừa không, nếu dư thừa thì thì xoá đi.</p>
+        <p><b>Thuộc tính dư thừa, phụ thuộc hàm dư thừa</b></p>
+        <h6>Định nghĩa thuộc tính dư thừa</h6>      
+        <p>Một phụ thuộc hàm có dạng αA → β, với A là một thuộc tính đơn lẻ.Ta nói A là thuộc tính dư thừa nếu có thể suy dẫn ra β từ α, Tức là </p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;α+⊇β</p>
+        <p>Cho F = 	&#123;	AC → B, C → B, ABDE → GH, A → E, A → D	&#125;	</p>
+        <p>+<i> Xét phụ thuộc hàm</i> AC → B:</p>
+        <p>Rõ ràng thuộc tính A trong AC → B là dư thừa vì C+ = (CB) </p>
+        <p>+<i> Xét phụ thuộc hàm</i> ABDE → GH:</p>
+        <p>Thuộc tính A : Không dư thừa vì (BDE)+ = BDE không chứa GH<br>
+            Thuộc tính B : Không dư thừa vì (ADE)+ = ADE không chứa GH<br>
+            Thuộc tính D: Dư thừa vì (ABE)+ = ABDE có chứa ABDE<br>
+            ( Loại thuộc tính D khỏi phụ thuộc hàm ABDE → GH ta được ABE → GH</p>
+</div>

@@ -1,0 +1,85 @@
+<div id="yy">
+    <nav class="navbar navbar-expand-md custom-header ">
+        <div class="container-fluid" style=" background-color:#4ABDAC"><a class="navbar-brand" href="#" style=" color:white;font-size:35px;margin-top:20px;margin-right:90px;text-shadow: -1px 2px white; font-family: 'Alex Brush', cursive;">Q&amp;A Database</a>
+            <div
+                class="collapse navbar-collapse" id="navbar-collapse" style="font-family: 'Times New Roman', Times, serif;">
+                <ul class="nav navbar-nav links">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href=""  routerLinkActive="active" [routerLink]="'/page1'">Tổng quan CSDL</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="" [routerLink]="'/page2'">Đại số quan hệ</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="" style="background-color: #f7b733;color: white;border:2px solid white">Phụ thuộc hàm &amp; khóa</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href=""[routerLink]="'/page4'">Chuẩn hóa LĐQH</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href=""[routerLink]="'/page5'">SQL&nbsp;</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href="" routerLink="/page6">Thông tin HP</a></li>
+                </ul>
+                <div class="nav navbar-nav ml-auto"><li><a href="" routerLink=""><img src="assets/Image/ynguyen.png" width="40" height="40" style= "text-align:right; margin-right: -10px;"></a></li></div>
+        </div>
+        </div>
+    </nav>
+    <div id="wrapper" style="font-family: 'Times New Roman', Times, serif;">
+        <div id="sidebar-wrapper" style="background-color:white;color:black; width: 334px;">
+            <ul class="sidebar-nav">
+                <li> <a  (click)="clickback()" [style.background-color]="page==false?'#f7b733':''" [style.color]="page==false?'white':''" [style.border-right-color]="page==false?'#dfdce3':''" style="font-size: 20px;background-color: #f7b733; color:white; border-right:5px solid #dfdce3;height:115px">Ràng buộc toàn vẹn <br>( Integrity Constraint ) </a></li>
+                <li id="menu"> <a   [style.background-color]="page2==true&&page==true?'#f7b733':''" [style.color]="page2==true&&page==true?'white':''" [style.border-right-color]="page2==true&&page==true?'#dfdce3':''" (click)="clickphan2()" [routerLink]="'phan2'" routerLinkActive="active" style="font-size: 20px;height:115px">Phụ thuộc hàm<br> ( Functional Dependency ) </a>
+                <li id="menu"> <a  [style.background-color]="page3==true&&page==true?'#f7b733':''" [style.color]="page3==true&&page==true?'white':''" [style.border-right-color]="page3==true&&page==true?'#dfdce3':''" (click)="clickphan3()" [routerLink]="'phan3'" routerLinkActive="active" style="font-size: 20px;height:115px">Hệ tiên đề về phụ thuộc hàm và các phép suy diễn logic</a>
+                <li id="menu"> <a [style.background-color]="page4==true&&page==true?'#f7b733':''" [style.color]="page4==true&&page==true?'white':''" [style.border-right-color]="page4==true&&page==true?'#dfdce3':''" (click)="clickphan4()" [routerLink]="'phan4'" routerLinkActive="active"  style="font-size: 20px;">Bao đóng ( Closure )  </a>
+                <li id="menu"> <a [style.background-color]="page5==true&&page==true?'#f7b733':''" [style.color]="page5==true&&page==true?'white':''" [style.border-right-color]="page5==true&&page==true?'#dfdce3':''" (click)="clickphan5()" [routerLink]="'phan5'" routerLinkActive="active"  style="font-size: 20px;">Phủ tối thiểu</a>
+                <li id="menu"> <a  [style.background-color]="page6==true&&page==true?'#f7b733':''" [style.color]="page6==true&&page==true?'white':''" [style.border-right-color]="page6==true&&page==true?'#dfdce3':''" (click)="clickphan6()" [routerLink]="'phan6'" routerLinkActive="active" style="font-size:20px;">Khóa trên lược đồ quan hệ</a></li>
+            </ul>
+        </div>
+   
+        <div class="page-content-wrapper"style="margin:10px 95px;padding:20px; background-color:white; height:650px; overflow:auto;font-size:16px">
+            <div [style.display]="page==false?'none':'block'">
+                 <router-outlet></router-outlet>
+            </div>
+            <div class="container-fluid" [style.display]="page==true?'none':'block'">
+                <div class="row"style="color:black;">
+                    <div class="col-md-12">
+                        <div>
+                            <h3>RÀNG BUỘC TOÀN VẸN ( Integrity Constraint ) </h3>
+                        </div>
+                        <h5>1.1. Ví dụ về ràng buộc toàn vẹn </h5>
+                        <p>Xét cơ sở dữ liệu Quản Lý Sinh viên có lược đồ như sau :</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SINHVIEN ( masv , hoten , phai , socmnd . ngsinh . diachi , tinh , makhoa )<br> 
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KHOA ( makhoa , tenkhoa )<br> 
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONHOC ( mamh , tenmh , sotiet )<br>  
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KETQUA ( masv , mamh , hocky , nienkhoa , lanthi , diem ) .</p>
+                        <p> Để thực hiện đúng quy định cũng như tạo điều kiện thuận lợi cho việc xử lý thì có thể có các điều kiện được đặt ra trên cơ sở dữ liệu này . Một số điều kiện thường gặp là :</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C1 : Mỗi sinh viên có một mã riêng biệt <br> 
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C2 . Mỗi sinh viên phải đăng ký vào một khóa của trường <br> 
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C3 : Mọi sinh viên được thì tối đa hai lần cho một môn học trong một học kỳ </p>
+                        <h5>1.2. Tính hợp lý trên cơ sở dữ liệu </h5>  
+                        <p>Khi định nghĩa một lược đồ quan hệ người ta không chỉ đặc tả các thuộc tính mà còn rất chú ý đến các ràng buộc toàn vẹn để đảm bảo tính hợp lý của cơ sở dữ liệu trong ngữ cảnh đang xét . Trong một cơ sở dữ liệu , luôn tồn tại nhiều ràng buộc giữa các thuộc tính , giữa các bộ , và giữa các quan hệ. Các ràng buộc này là các điều kiện mà tất cả các bộ của các quan hệ sinh ra từ lược đồ quan hệ  phải thảo mãn ở bất cứ thời điểm nào . </p>
+                        <p>Các hệ quản trị cơ sở dữ liệu có các cơ chế đặc là và quản lý các ràng buộc toàn vẹn . Các ràng buộc toản vẹn này , về cơ bản , chính là các điều kiện sẽ được kiểm tra trên từng bộ hoặc trên toàn quan hệ khi xảy ra một trong các thao tác thêm , sửa , xóa trên cơ sở dữ liệu</p>
+                        <p>Mục đích của việc xây dựng các ràng buộc tòan vẹn là nhằm đảm bảo tính độc lập ( Independency ) và toàn vẹn ( Integrity ) dữ liệu: dữ liệu lưu trữ trong hệ cơ sở dữ liệu là hiện thực khách quan , không dư thừa và không mâu thuẫn về thông tin , và tất nhiên là thuận tiện cho việc sử dụng.</p>  
+         
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div  class="media1"  (click)="clickvideo()"  [routerLink]="'video'" routerLinkActive="active"><img src="assets/Image/video.png"  class="icon-footer" />  </div>  
+<div  class="media2"  (click)="clickgiaotrinh()" [routerLink]="'giaotrinh'" routerLinkActive="active"><img src="assets/Image/book.png"  class="icon-footer" />  </div>  
+<div  class="media3"  (click)="clickbaitap()" [routerLink]="'baitap'" routerLinkActive="active"><img src="assets/Image/tl.png"  class="icon-footer" />  </div> 
+<!-- <div class="footer">
+    <div id="icon"(click)="setClick()"  >
+             <div class="icon1"><img src="/assets/Image/text.png"  class="icon-footer" /> </div>  
+    </div>
+    <div [style.display]="value==true?'inline':'none'" id="container" class="footer-head" >
+            <div style="float:right; margin-right: 50px;" (click)="removeClick()"> <a> <img src="assets/Image/thoattest.png" height="20px" width="20px" /> </a></div> 
+             <div id="cont" >
+                     <div class="footer_center"  style="overflow:auto;" >
+                            
+                               <div *ngFor="let kiemtras of kiemtra  | paginate:{itemsPerPage: 1, currentPage:p}">
+        
+                                <app-kiemtra [kiemtras]="kiemtras" ></app-kiemtra> -->
+                                <!-- <pagination-controls (pageChange)="p=$event"> </pagination-controls> -->
+                                <!-- <p *ngFor="let cauhois of cauhoi | paginate:{itemsPerPage: 1, currentPage:p}">Câu hỏi: {{cauhois.cauhoi}}</p> -->
+                               <!-- </div>
+                               <pagination-controls (pageChange)="p=$event"> </pagination-controls> -->
+                               <!-- | paginate: {itemsPerPage: 1, CurrentPage:p} -->
+                             
+                   <!-- </div>
+              </div>
+     </div> -->

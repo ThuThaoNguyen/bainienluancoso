@@ -1,0 +1,28 @@
+<div>
+    <h3> MÔ HÌNH DỮ LIỆU (Data Model Types)</h3>
+</div>
+    
+    <h5> 3.1. Mô hình dữ liệu và sự trừu tượng dữ liệu </h5>
+    <p>Mô hình dữ liệu là một tập hợp các khái niệm có thể được sử dụng để mô tả cấu trúc cơ sở dữ liệu, kiểu dữ liệu, các mối quan hệ và ràng buộc toàn vẹn. Thêm nữa, hầu hết các mô hình dữ liệu còn có một tập hợp các phép toán cơ bản để đặc tả sự phục hồi (Retrieval) và sự sửa đổi (Modification) trên cơ sở dữ liệu.</p>
+    <p>Mô hình dữ liệu cung cấp một phương tiện để diễn đạt sự trừu tượng dữ liệu (Data Abstraction). Trừu tượng dữ liệu có nghĩa là dấu đi các chi tiết phức tạp về việc lưu trữ và duy trì dữ liệu. View của người dùng trên cơ sở dữ liệu là một mức trừu tượng dữ liệu, nó làm cho người dùng hiểu về cơ sở dữ liệu dễ dàng hơn.</p>
+    <p>Thông thường có 3 mức trừu tượng:</p>
+    <p>&nbsp;1.Mức view (View Level)</p>
+    <p> Mức này còn gọi là mức người dùng, nó mô tả một phần của cơ sở dữ liệu. Phần lớn người dùng sẽ không liên quan đến cơ sở dữ liệu lớn. Thay vào đó họ cần truy xuất đến chỉ một phần của nó, vì thế mức trừu tượng view được định nghĩa. Có nhiều view đổi với cùng một cơ sở dữ liệu. </p>
+    <p>&nbsp;2.Mức logic (Logical Level) </p>
+    <p>Mức này còn gọi là mức tổ chức, nó mô tả dữ liệu gì trong cơ sở dữ liệu.</p>
+    <p>&nbsp;3.Mức vật lý (Physical Level) </p>
+    <p>Mức này còn gọi là mức lưu trữ, nó mô tả dữ liệu được lưu trữ thực sự như thế nào.</p>
+    <h5>3.2.Các kiểu mô hình dữ liệu</h5>
+    <p>Việc tổ chức cơ sở dữ liệu theo mô hình dữ liệu nào là tốt nhất, thực tế chưa có câu trả lời. Câu trả lời phụ thuộc vào yêu cầu truy xuất và khai thác thông tin của đơn vị quản lý nó. Có nhiều mô hình dữ liệu được đề xuất cho việc tổ chức cơ sở dữ liệu. Chúng thường được chia làm ba nhóm như sau: </p>
+    <p>&nbsp;1. Mô hình dữ liệu dựa trên đối tượng (Object-Based Data Models)</p>
+    <p>&nbsp;2. Mô hình dữ liệu dựa trên mẫu tin (Record-Based Data Models)</p>
+    <p>&nbsp;3. Mô hình dữ liệu vật lý (Physical Data Models)</p>     
+    <p>Các mô hình dữ liệu thường được sử dụng là:</p>
+    <p>&nbsp;1.Mô hình thực thể mối quan hệ ERM (Entity Relationship Model)</p>
+    <p>Mô hình thực thể mối quan hệ được sử dụng rộng rãi để thiết kế cơ sở dữ liệu. Mô hình này được xây dựng dựa trên nhận thức rằng thế giới thực mà chúng ta muốn phản ảnh là một tập hợp các đối tượng cơ sở và các mối kết hợp giữa chúng. Mô hình này sử dụng các khái niệm: thực thể (Entity), Mối quan hệ (Relationship) và thuộc tính (Attribute).</p>
+    <p>&nbsp; 2. Mô  hình dữ liệu quan hệ (Relational Data Model) </p>
+    <p>Mô hình dữ liệu quan hệ, là một mô hình thông dụng được trình bày chi tiết trong phần sau bằng công cụ toán học chặt chẽ. Mô hình dữ liệu quan hệ mô tả dữ liệu bằng nhiều bảng (table). Mỗi bảng là một tập hợp các bộ (tuple) hay còn gọi là mẫu tin (Record). Mỗi mẫu tin thể hiện trên một dòng (row) gồm nhiều giá trị thể hiện trên nhiều cột (column) hay còn gọi là thuộc tính (attribute). Mối liên kết giữa các đối tượng được thể hiện Két giữa các bảng nhờ vào sự xuất hiện trùng lặp của một số thuộc tính ở nhiều bảng. </p>
+    <p>&nbsp;3. Mô hình dữ liệu phân cấp (Hierachical Data Model) </p>
+    <p>Trong mô hình dữ liệu phân cấp dữ liệu được mô tả bằng cấu trúc rừng gồm nhiều cây. Trên mỗi cây chứa một và chỉ một mẩu tin gốc va bên dưới nó là các mẩu tin con. Các mẫu tin con có thể là tùy ý hoặc không tồn tại. Một mẫu tin gốc có thể có một số bất kỳ các mẫu tin con, đến lượt mỗi mẫu tin con có thể có một số bất kỳ các mẫu tin con mức thấp hơn.</p>
+    <p>&nbsp;4. Mô hình dữ liệu mạng (Network Data Model)</p>
+    <p>Mô hình dữ liệu mạng là dạng mô hình thực thể mối quan hệ mà trong đó các mối kết hợp chỉ là dạng một- một hoặc nhiều - một. Trong mô hình này dữ liệu được biểu diễn bởi một tập hợp các mẫu tin, còn các mối kết hợp được biểu diễn bởi các liên kết (link), chúng tạo thành một đô thị có hướng. </p>

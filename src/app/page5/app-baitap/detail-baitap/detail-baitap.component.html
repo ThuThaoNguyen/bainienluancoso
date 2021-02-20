@@ -1,0 +1,50 @@
+
+<div *ngIf="baitap && baitap.STT_l == 3&&baitap.STT_lch==5">
+
+   <div class="article-clean" style="background-color:white; height:auto;margin:0px; ">
+     <div class="container" style="margin: 0px; text-align:center;width:auto;">
+         <div class="row" style="margin: 0px 50px;">
+             <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2" style="background-color: #ffffff;">
+                 <!-- <div class="intro"><img class="img-fluid" src="" style="color: rgb(247,183,51);"><iframe src="{{tailieu.Nguontailieu}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div> -->
+
+                 <!-- <div class="intro"><iframe src="{{tailieu.linktailieu}}" style="margin-top: 50px;"></iframe></div> -->
+                 
+                 <!-- <div class="intro"> <img src="assets/{{tailieu.linktailieu}}" width="300" height="350"/> </div> -->
+                 <!-- <div class="intro"> <embed src="assets/Tailieu/11.pdf" type="application/pdf" width="300" height="350"/> </div> -->
+                 <div class="intro">
+                 <object  type="application/x-pdf" title="{{baitap.Tentailieu}}" width="500" height="720">
+                   <a href="assets/{{baitap.linktailieu}}" target ="_blank"><img src="assets/Tailieu/pdf-icon-png-pdf-zum-download-2.png" width="300" height="350"/></a> 
+                   <!-- https://stackoverflow.com/questions/291813/recommended-way-to-embed-pdf-in-html -->
+                 </object>
+                 </div>
+
+                 <div style="width: 18%;height: 50px;position: absolute;right: 0px; margin: 2% 42% 4% 0px;">
+                     <!-- <i class="fa fa-heart" type ="submit" style="font-size: 30px;color: rgb(247,183,51);" (click)="clickthich()"></i> -->
+
+                     <!-- <button mat-mini-fab color="warn" type ="submit" style="font-size: 20px; color: black; margin-top: 5%;" (click)="updatelike()"> <mat-icon >favorite</mat-icon> </button> -->
+
+                     <button mat-mini-fab color="warn" type ="submit" style="font-size: 20px; color: rgb(255, 255, 255); margin-top: 2%;" (click)="updatelike()"> <mat-icon >favorite</mat-icon></button>
+
+                  </div>
+                     <!-- <button type="submit" class="btn btn-success"> thich</button> -->
+                  <div style="position: absolute; display:inline-block; margin:20px 0px 0px 30px">
+                     <p style=" color: black rgb(255,255,255);font-family: Cookie, cursive;float:right;" >{{baitap.Luotthich}} lượt thích </p>
+                  </div>
+                 
+         
+                 <div class="text" style="margin: 50px 0px 0px 0px;">
+                     <p class="text-center"><span class="by" style="color: rgb(255,255,255);font-family: Cookie, cursive;;">by</span> <a href="{{baitap.Nguontailieu}}" target ="_blank" style="color: rgb(247,183,51);font-size: 20px;font-family: Cookie, cursive;">{{baitap.Nguontailieu}}</a></p>
+                 </div>
+                 <h1 class="text-center" style="color:  black ;font-size: 30px;font-family: Cookie, cursive;margin: 0px "> {{baitap.Tentailieu}}</h1>
+                 <hr>
+             </div>
+         </div>
+     </div>
+   </div>
+   
+   </div>
+
+ 
+   
+   <!-- https://www.npmjs.com/package/mat-video
+     https://www.npmjs.com/package/ngx-embed-video -->

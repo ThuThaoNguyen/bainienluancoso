@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>kiemtra</title>
+    <link rel="stylesheet" href="assets/kiemtra1/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/kiemtra1/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/kiemtra1/assets/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="assets/kiemtra1/assets/css/styles.css">
+</head>
+
+<body style="background-color:  #e1e1d0; font-family: 'Open Sans';" >
+
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="background-color: #05305A; height: 80px">
+        <div class="container"><a class="navbar-brand" href="#" style="font-family:'Open Sans'; font-size: 40px; color: white">Q&A Database</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <form class="form-inline mr-auto" target="_self">
+                    <div class="form-group"><label for="search-field"><i class="fa fa-search" style="font-size: x-large;"></i></label><input class="form-control search-field" type="search" name="search" id="search-field" [(ngModel)]="textsearch"  (change)="search()" style="font-size: 15px; color: snow;"></div>
+                </form>
+
+
+                <ul>
+                    <li>
+                        <a  role="button"  href="#" style="background-color: #F8D24B;"><b>Trang chủ</b> </a>
+                    </li>
+                </ul>
+                
+
+ 
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="row" style="font-family: 'Open Sans';">
+        <div class="features-blue" >
+            <div class="container-fluid"  >
+                <!-- <div class="intro"></div> -->
+                <div  style="margin: 20px 15px;padding: 20px;" >
+                   
+                    <div class="col-sm-10 col-md-4 item" *ngFor="let de of dekt">
+                        <div class="shadow-lg p-2 bg-white rounded" style="background-color: #F4F4F4; margin:10px;  border-bottom: 5px solid #e6e6e1;" *ngIf = "de && de.loai == 'tự luận'" [routerLink]="['bode',de.type]" (click)="gotoEXAPLE(dekt.type)" (click)="  sendMessage()">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="{{de.img}}" alt="" >
+                                <div class="overlay">
+                                    <h2 style="text-align: center;"><b>{{de.tende}} <br> {{de.loai}}</b></h2>
+                                   
+                                  
+                                        <a class="info" style="font-size: 20px; color: snow;">Click để kiểm tra</a>
+                                    
+                               
+                                </div>
+                            </div>
+    
+                            <div class="infor" style="text-align: center; height:450px;">
+                                <h2 style="text-align: center;"><b>{{de.tende}} - {{de.loai}}</b></h2>
+                                    <p style="font-size: 15px;">{{de.mota}}</p>
+                                    <a class="action" style="font-size: 30px; color:  #4abdac;"><i class="fa fa-arrow-circle-right" ></i></a>
+                            </div>
+                        </div>
+                    </div> <!-- end class='col-sm-10 col-md-4 item' tu luan -->
+
+                    <div class="col-sm-10 col-md-4 item" *ngFor="let de of dekt">
+                        <div class="shadow-lg p-2 bg-white rounded" style="background-color: #F4F4F4; margin:10px;  border-bottom: 5px solid #e6e6e1;" *ngIf = "de && de.loai == 'trắc nghiệm'" [routerLink]="['tracnghiem',de.type]" (click)="gotoEXAPLE(dekt.type)" (click)="  sendMessage()">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="{{de.img}}" alt="" >
+                                <div class="overlay">
+                                    <h2 style="text-align: center;"><b>{{de.tende}} <br> {{de.loai}}</b></h2>
+                                   
+                                  
+                                        <a class="info" style="font-size: 20px; color: snow;">Click để kiểm tra</a>
+                                    
+                               
+                                </div>
+                            </div>
+    
+                            <div class="infor" style="text-align: center; height:450px;">
+                                <h2 style="text-align: center;"><b>{{de.tende}} - {{de.loai}}</b></h2>
+                                    <p style="font-size: 15px;">{{de.mota}}</p>
+                                    <a class="action" style="font-size: 30px; color:  #4abdac;"><i class="fa fa-arrow-circle-right" ></i></a>
+                            </div>
+                        </div>
+                    </div> <!-- end class='col-sm-10 col-md-4 item' trac nghiem -->
+                  
+                </div>
+            </div>
+        </div>
+    
+    </div>
+            
+       
+
+        <!-- <div class="col-md-4" style="padding: 2%; border: 1px solid black">center</div>
+        <div class="col-md-4" style="padding: 2%; border: 1px solid black">right</div> -->
+    <!-- </div> -->
+
+
+
+
+   
+
+</body>
+</html>
